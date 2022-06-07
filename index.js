@@ -2,7 +2,13 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const { saveArtist, saveSong } = require("./controller/controller");
+app.use(bodyParser.json());
 
+
+
+app.post("/song", saveSong);
+app.post("/artist", saveArtist);
 
 app.get("/",(req,res)=>{
     res.send("<h1>Running</h1>")

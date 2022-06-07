@@ -7,18 +7,10 @@ var artistSchema = new mongoose.Schema({
     maxlength: 32,
     trim: true
   },
-  birth_date: {
-    type: Number,
+  dob: {
+    type: Date,
     required: true,
-},
-birth_month: {
-    type: Number,
-    required: true,
-},
-birth_year: {
-    type: Number,
-    required: true,
-},
+  },
   bio:{
       type:String ,
       required:true

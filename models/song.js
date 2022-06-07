@@ -7,18 +7,10 @@ var songSchema = new mongoose.Schema({
     maxlength: 32,
     trim: true
   },
-  rel_date: {
-    type: Number,
-    required: true,
-},
-rel_month: {
-    type: Number,
-    required: true,
-},
-rel_year: {
-    type: Number,
-    required: true,
-},
+  release:{
+    type:Date,
+    required:true
+  },
   artist: {
     type: Array,
     default: []
